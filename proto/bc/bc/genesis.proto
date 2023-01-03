@@ -1,0 +1,14 @@
+syntax = "proto3";
+package bc.bc;
+
+import "gogoproto/gogo.proto";
+import "bc/bc/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "bc/x/bc/types";
+
+// GenesisState defines the bc module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
